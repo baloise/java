@@ -1,3 +1,3 @@
 # Documentation
 
-* [Meeting Notes](meeting_notes/README.md)
+* [Meeting Notes](meeting_notes)
