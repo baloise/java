@@ -1,7 +1,7 @@
-# Agende for the next meeting
+# Agenda for the next meeting:
 
 * How to Slack? (Rudolf Biczok)
-* Future format of meetings (Rudolf Biczok)
+* Future meeting format (Rudolf Biczok)
   * Sprint planning? 
   * Talk series? 
   * In between?
