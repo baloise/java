@@ -21,6 +21,6 @@
 
 ## Project Structure
 
-### [Documentation](docs/index.md)
+### [Documentation](docs/README.md)
 
-* [Meeting Notes](docs/meeting_notes/index.md)
+* [Meeting Notes](docs/meeting_notes/README.md)
