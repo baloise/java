@@ -23,6 +23,13 @@
     <url>https://www.baloise.com</url>
   </organization>
 
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+
   <groupId>com.baloise.open.java</groupId>
   <artifactId>java</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -51,6 +58,7 @@
     <junit.platform.version>1.2.0</junit.platform.version>
     <org.hamcrest.version>1.3</org.hamcrest.version>
   </properties>
+
   
   <dependencies>
       <dependency>
@@ -76,6 +84,11 @@
       <artifactId>hamcrest-library</artifactId>
       <version>${org.hamcrest.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.baloise</groupId>
+      <artifactId>java</artifactId>
+      <version>daf896a6</version>
     </dependency>
   </dependencies>
   
