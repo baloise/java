@@ -2,7 +2,7 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
 }
-group = 'baloise'
+group = 'com.baloise'
 version = '0.1'
 
 dependencies {
