@@ -6,7 +6,7 @@ group = 'baloise'
 version = '0.1'
 
 dependencies {
-    implementation 'com.github.baloise:java:eef05a1e'
+    implementation 'com.github.baloise:java:6246ddeb'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
