@@ -1,7 +1,32 @@
+buildscript {
+    repositories {
+        maven { url 'https://nexus.balgroupit.com/repository/gradle-plugins' }
+        maven {
+            name 'Nexus'
+            url 'https://nexus.balgroupit.com/repository/baloise-ch-public'
+        }
+        jcenter { url 'https://nexus.balgroupit.com/repository/jcenter' }
+    }
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.15'
+    }
+}
+
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    id("org.asciidoctor.convert") version "1.5.9.2"
 }
+
+repositories {
+    // mavenLocal() // just for completeness, like in java projects
+    maven {
+        url "https://nexus.balgroupit.com/repository/baloise-ch-public"
+        name 'Nexus'
+    }
+    jcenter { url 'https://nexus.balgroupit.com/repository/jcenter' }
+}
+
 group = 'com.baloise'
 version = '0.1'
 
@@ -23,3 +48,11 @@ test {
     useJUnitPlatform()
 }
 
+asciidoctor {
+    backends 'pdf', 'html5'
+    sourceDir = file('src/docs')
+    sources {
+        include 'main.adoc'
+    }
+    outputDir = file('build/docs')
+}
