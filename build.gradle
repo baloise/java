@@ -18,12 +18,5 @@ test {
     useJUnitPlatform()
 }
 
-task info {
-    group "bla"
-    doFirst {
-        println internalBuild == 'true' ? "internal" : "public"
-        println internalRepo
-    }
-}
-
+group 'com.baloise.open.java'
 
