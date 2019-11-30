@@ -30,3 +30,6 @@ target/
 .project
 .classpath
 /bin/
+
+# gradle
+!gradle/wrapper/gradle-wrapper.jar
