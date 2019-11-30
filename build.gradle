@@ -17,4 +17,5 @@ test {
 }
 
 group 'com.baloise.open.java'
+version '0.1.0'
 
