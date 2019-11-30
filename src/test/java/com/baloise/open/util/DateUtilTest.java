@@ -13,11 +13,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DateUtilTests {
 
-    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+    private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 
-    String isoDatePattern = "yyyy-MM-dd'T'HH:mm:ss";
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(isoDatePattern);
-    SimpleDateFormat localDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    private String isoDatePattern = "yyyy-MM-dd'T'HH:mm:ss";
+    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat(isoDatePattern);
+    private SimpleDateFormat localDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
     @Test
     void localDateTimeToDate() {
