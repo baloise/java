@@ -18,20 +18,19 @@ public class DateUtilPropertyTest {
 	private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 	private SimpleDateFormat simpleDateFormat = new SimpleDateFormat(isoDatePattern);
 
+	// simpleDateFormat.parse("2019-04-01T00:00:01").getTime(); // 1554069601000
+	private final long T_2019_04_01 = 1554069600000L; // "2019-04-01T00:00:01"
+	private final long T_2019_10_01 = 1569880801000L; // "2019-10-01T00:00:01
+
 	@Example
 	void developmentHelpers() throws ParseException {
 		long from = simpleDateFormat.parse("2019-04-01T00:00:01").getTime(); // 1554069601000
 		long to = simpleDateFormat.parse("2019-10-01T00:00:01").getTime(); // 1569880801000
-		System.out.println("from = " + from);
-		System.out.println("to = " + to);
-		System.out.println(simpleDateFormat.format(new Date(1554069600000L)));
-		System.out.println(simpleDateFormat.format(new Date(1554069601000L)));
 	}
 
 	@Property
-	@Disabled("not working yet")
-	void absoluteValueOfAllNumbersIsPositive(@ForAll @LongRange(min = 1554069601000L, max = 1569880801000L) long aLong ) {
-		assertThat(DateUtil.convertToDate(DateUtil.convertToLocalDate(new java.util.Date(aLong))).getTime()).isEqualTo(aLong);
+	void absoluteValueOfAllNumbersIsPositive(@ForAll @LongRange(min = T_2019_04_01, max = T_2019_10_01) long aLong ) {
+		assertThat(DateUtil.convertToDate(DateUtil.convertToLocalDateTime(new java.util.Date(aLong))).getTime()).isEqualTo(aLong);
 	}
 
 }
