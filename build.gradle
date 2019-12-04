@@ -32,7 +32,7 @@ dependencies {
 }
 
 repositories {
-    internalBuild == 'true' ? internalRepo : jcenter()
+    internalBuild == 'true' ? (maven {url = internalRepo}) : jcenter()
 }
 
 test {
