@@ -33,3 +33,6 @@ target/
 
 # gradle
 !gradle/wrapper/gradle-wrapper.jar
+
+# jqwik
+.jqwik-database
