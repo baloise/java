@@ -16,14 +16,17 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/baloise/java")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("PASSWORD")
+                username = findProperty("GITHUB_USERNAME")
+                password = findProperty("GITHUB_API_TOKEN")
             }
         }
     }
-    publications {
-        gpr(MavenPublication) {
-            from(components.java)
+    afterEvaluate {
+        publications {
+            libJar(MavenPublication) {
+                from components["java"]
+                artifact(tasks["sourcesJar"])
+            }
         }
     }
 }
