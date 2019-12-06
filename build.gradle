@@ -14,7 +14,9 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/baloise/java")
+            def releasesRepoUrl = "https://maven.pkg.github.com/baloise/java/releases"
+            def snapshotsRepoUrl = "https://maven.pkg.github.com/baloise/java/snapshots"
+            url = uri(version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl)
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.key") ?: System.getenv("PASSWORD")
