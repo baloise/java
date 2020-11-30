@@ -15,7 +15,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bf6fa237dd934970991ecba2c66db23e)](https://app.codacy.com/app/baloise/java?utm_source=github.com&utm_medium=referral&utm_content=baloise/java&utm_campaign=Badge_Grade_Dashboard)
 [![DepShield Badge](https://depshield.sonatype.org/badges/baloise/java/depshield.svg)](https://depshield.github.io)
-[![Build Status](https://travis-ci.org/baloise/java.svg?branch=master)](https://travis-ci.org/baloise/java)
+[![Build Status](https://travis-ci.com/baloise/java.svg?branch=master)](https://travis-ci.com/baloise/java)
 [![Codecov](https://img.shields.io/codecov/c/github/baloise/java.svg)](https://codecov.io/gh/baloise/java)
 [![gitpod-IDE](https://img.shields.io/badge/open--IDE-as--gitpod-blue.svg?style=flat&label=openIDE)](https://gitpod.io#https://github.com/baloise/java)
 
